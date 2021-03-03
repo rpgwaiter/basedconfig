@@ -16,9 +16,27 @@ let
 
 
   suites = with profiles; rec {
+    /*
     base = [ users.nixos users.root ];
+    */
+    base = [ users.robots users.root users.jenkins profiles.networking.ssh ];
+    mediaHost = with media; [ jellyfin rtorrent plex ];
+    basedlan = medium ++ [ media.rutorrent webserver.nginx ];
+    nas = with filesystems; [ export-nfs export-smb ];
   };
 in
 mapAttrs (_: v: profileMap v) suites // {
   inherit allProfiles allUsers;
 }
+
+
+
+
+
+
+
+
+
+
+
+
