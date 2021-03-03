@@ -3,3 +3,4 @@ up
 hosts/up-*
 .direnv
 book
+**secret.nix
