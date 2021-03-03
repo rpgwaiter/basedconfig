@@ -79,7 +79,7 @@ let
 
         $locale = "UTF8";
     '';
-    version = "0288a7e";
+    version = "v3.10";
 in
     stdenv.mkDerivation rec {
         pname = "rutorrent";
