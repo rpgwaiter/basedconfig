@@ -1,5 +1,4 @@
 { stdenv
-, lib
 , writeText
 , php
 , procps
@@ -96,7 +95,7 @@ in
             cp ${configFile} conf/config.php
         '';
 
-        meta = with lib; {
+        meta = with stdenv.lib; {
             description = "Yet another web front-end for rTorrent";
             homepage = "https://github.com/Novik/ruTorrent";
             maintainers = [ maintainers.rpgwaiter ];
