@@ -6,6 +6,9 @@
 , curl
 , gzip
 , coreutils
+, ffmpeg
+, mediainfo
+, sox
 , fetchFromGitHub
 , srcs
 , ... }:
