@@ -1,6 +1,6 @@
 { suites, config, lib, pkgs, inputs, ... }: 
 {
-  imports = with suites; lib.concatLists [ base mediaHost nas ];
+  imports = with suites; lib.concatLists [ base basedlan nas ];
 
   ## ALIASES ##
   environment.shellAliases = {
