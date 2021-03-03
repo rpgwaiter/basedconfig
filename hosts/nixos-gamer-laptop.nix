@@ -30,7 +30,7 @@
 
 
   environment.shellAliases = {
-    upd = "sudo nixos-rebuild switch --upgrade --flake /home/robots/git/basedconfig-ng#nixos-gamer-laptop ";
+    upd = "sudo nixos-rebuild switch --upgrade --flake ~/git/basedconfig#nixos-gamer-laptop ";
   };
     
   networking = {
