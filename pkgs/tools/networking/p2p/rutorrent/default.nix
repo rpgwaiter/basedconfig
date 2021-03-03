@@ -1,4 +1,5 @@
 { stdenv
+, lib
 , writeText
 , php
 , procps
