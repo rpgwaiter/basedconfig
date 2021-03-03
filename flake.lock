@@ -245,7 +245,7 @@
     },
     "srcs": {
       "locked": {
-        "narHash": "sha256-Ot96/oKT5+A5kdqkfYyT45cfEiqhI5UyPdEfEZjbXaA=",
+        "narHash": "sha256-8v7JQ6pSdC383QRMSRS8hs+4nWzci8XrAN9yWRg6eDI=",
         "path": "./pkgs",
         "type": "path"
       },
