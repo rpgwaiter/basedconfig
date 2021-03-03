@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  imports = [./secret.nix ];
+  imports = [../secrets/robots-secret.nix ];
   users.users.robots = {
     isNormalUser = true;
     group = "robots";
