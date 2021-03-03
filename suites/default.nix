@@ -19,24 +19,12 @@ let
     /*
     base = [ users.nixos users.root ];
     */
-    base = [ users.robots users.root users.jenkins profiles.networking.ssh ];
+    base = [ users.robots users.root users.jenkins networking.ssh ];
     mediaHost = with media; [ jellyfin rtorrent plex ];
     basedlan = medium ++ [ media.rutorrent webserver.nginx ];
-    nas = with filesystems; [ export-nfs export-smb ];
+    nas = with filesystems; [ hardware.ups export-nfs export-smb ];
   };
 in
 mapAttrs (_: v: profileMap v) suites // {
   inherit allProfiles allUsers;
 }
-
-
-
-
-
-
-
-
-
-
-
-
