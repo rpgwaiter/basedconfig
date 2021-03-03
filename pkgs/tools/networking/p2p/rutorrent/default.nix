@@ -61,6 +61,9 @@ let
             "gzip"  => '${gzip}/bin/gzip',
             "id"    => '${coreutils}/bin/id',
             "stat"  => '${coreutils}/bin/stat',
+            "ffmpeg => '${ffmpeg}/bin/ffmpeg',
+            "mediainfo => '${mediainfo}/bin/mediainfo',
+            "sox" => '${sox}/bin/sox',
         );
 
         $localhosts = array(
