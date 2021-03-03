@@ -1,15 +1,5 @@
 { suites, config, lib, pkgs, inputs, ... }: 
 {
-  /*imports = with lib.lists; map (x: ../.  + "/${x}") (flatten [
-    (map (x: "users/${x}")    [ "root" "borg" "robots" "storage" "robotsadmin" ])
-    (map (x: "profiles/${x}") (flatten ([ "networking/ssh" "media/jellyfin" "home/assistant" 
-    "cicd/jenkins" "security/bitwarden" "home/searx" "media/rtorrent" "media/rutorrent" 
-    "media/jellyfin" "media/plex" "cicd/gitea" "backups/borg/storage" "webserver/nginx"
-    "filesystems/export-nfs" "filesystems/export-smb" "filesystems/mount-zfs" "networking/unifi"
-      (map (x: "docker/${x}") [ "registry" "trilium" ])
-    ]))) ## This is probably really bad idk, saves a small amount of space though
-  ]);*/
-
   imports = with suites; [ base mediaHost nas ];
 
   ## ALIASES ##
