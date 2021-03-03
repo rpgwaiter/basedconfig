@@ -19,10 +19,31 @@ let
     /*
     base = [ users.nixos users.root ];
     */
-    base = [ users.robots users.root users.jenkins networking.ssh ];
-    mediaHost = with media; [ jellyfin rtorrent plex ];
-    basedlan = medium ++ [ media.rutorrent webserver.nginx ];
-    nas = with filesystems; [ hardware.ups export-nfs export-smb ];
+    
+    base = [
+      users.robots
+      users.root
+      users.jenkins
+      networking.ssh
+    ];
+    
+    mediaHost = [ 
+      media.jellyfin
+      media.rtorrent
+      media.plex
+    ];
+    
+    basedlan = mediaHost ++ [
+      media.rutorrent
+      webserver.nginx
+    ];
+    
+    nas = [
+      hardware.ups
+      filesystems.export-nfs
+      filesystems.export-smb
+    ];
+
   };
 in
 mapAttrs (_: v: profileMap v) suites // {
