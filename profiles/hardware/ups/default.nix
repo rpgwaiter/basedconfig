@@ -8,4 +8,13 @@
             description = "Server UPS";
         };
     };
+
+    users.groups.nut = {};
+    users.users.local_mon = {
+        group = "nut";
+        isNormalUser = false;
+        isSystemUser = true;
+        createHome = true;
+        home = "/var/lib/nut";
+    };
 }
