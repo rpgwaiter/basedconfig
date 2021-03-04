@@ -29,7 +29,6 @@ let
 
     networkStack = with networking; [
       unifi
-      netboot
     ];
     
     mediaHost = with media; [ 
