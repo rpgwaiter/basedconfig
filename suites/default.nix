@@ -27,6 +27,14 @@ let
       networking.ssh
     ];
 
+    # Desktop
+    desktopStack = [
+      desktop
+      email
+      backups.syncthing
+    ];
+
+    # Servers
     networkStack = with networking; [
       unifi
     ];
