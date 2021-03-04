@@ -39,7 +39,7 @@ let
     ];
     
     nas = with filesystems; [
-      hardware.ups
+      #hardware.ups
       export-nfs
       export-smb
       mount-zfs
