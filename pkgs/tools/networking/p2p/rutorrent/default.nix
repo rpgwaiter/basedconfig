@@ -11,6 +11,7 @@
 , sox
 , fetchFromGitHub
 , srcs
+, lib
 , ... }:
 let 
     inherit (stdenv) mkDerivation;
@@ -85,13 +86,13 @@ let
 
         $locale = "UTF8";
     '';
-    version = "v3.10";
+    version = lib.flk.mkVersion srcs.rutorrent;
 in
     stdenv.mkDerivation rec {
         pname = "rutorrent";
         inherit version;
 
-        src = srcs.rutorrent;
+        srcs = srcs.rutorrent;
 
         installPhase = ''
             export HOME=".";
@@ -101,7 +102,7 @@ in
             cp ${configFile} conf/config.php
         '';
 
-        meta = with stdenv.lib; {
+        meta = with lib; {
             description = "Yet another web front-end for rTorrent";
             homepage = "https://github.com/Novik/ruTorrent";
             maintainers = [ maintainers.rpgwaiter ];
