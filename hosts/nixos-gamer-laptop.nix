@@ -2,7 +2,7 @@
 {
   imports = with suites; lib.concatLists [ base desktopStack ] ++ [
       ../profiles/boot/systemd-boot
-      ../profiles/backups.borg.gamer-laptop 
+      ../profiles/backups/borg/gamer-laptop 
     ];
 
   boot = {
