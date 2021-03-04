@@ -1,6 +1,9 @@
-{ suites, lib, config, pkgs, boot, backups, ... }:
+{ suites, lib, config, pkgs, ... }:
 {
-  imports = with suites; lib.concatLists [ base desktopStack ] ++ [ boot.systemd-boot backups.borg.gamer-laptop ];
+  imports = with suites; lib.concatLists [ base desktopStack ] ++ [
+      ../profiles/boot/systemd-boot
+      ../profiles/backups.borg.gamer-laptop 
+    ];
 
   boot = {
     supportedFilesystems = [ "ntfs"] ;
