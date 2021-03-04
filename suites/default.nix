@@ -35,7 +35,7 @@ let
     # Desktop
     desktopStack = basegui ++ [
       desktop
-      email
+      email.client
     ];
 
     # Servers
