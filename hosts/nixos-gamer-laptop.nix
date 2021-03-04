@@ -1,4 +1,4 @@
-{lib, config, pkgs, ... }:
+{ suites, lib, config, pkgs, ... }:
 {
   imports = with suites; lib.concatLists [ base desktopStack ];
 
