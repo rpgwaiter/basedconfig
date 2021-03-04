@@ -27,10 +27,10 @@ let
       networking.ssh
     ];
     
-    mediaHost = [ 
-      media.jellyfin
-      media.rtorrent
-      media.plex
+    mediaHost = with media;[ 
+      jellyfin
+      rtorrent
+      plex
     ];
     
     basedlan = mediaHost ++ [
@@ -38,10 +38,11 @@ let
       webserver.nginx
     ];
     
-    nas = [
+    nas = with filesystems; [
       hardware.ups
-      filesystems.export-nfs
-      filesystems.export-smb
+      export-nfs
+      export-smb
+      mount-zfs
     ];
 
   };
