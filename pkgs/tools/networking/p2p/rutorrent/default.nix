@@ -87,7 +87,7 @@ let
 
         $locale = "UTF8";
     '';
-    version = lib.flk.mkVersion rutorrent;
+    version = lib.flk.mkVersion srcs.rutorrent;
 in
     stdenv.mkDerivation rec {
         pname = "rutorrent";
