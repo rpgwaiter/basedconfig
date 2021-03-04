@@ -262,7 +262,7 @@
         "rutorrent": "rutorrent"
       },
       "locked": {
-        "narHash": "sha256-30sPVt9dZB4cNYGBp6tf09q3gl0L7TLjAID7X6RXajs=",
+        "narHash": "sha256-EzACkyxbAfxZuxO/rJBP1XS3rGDK+WLf4Ws9F5kDWvk=",
         "path": "./pkgs",
         "type": "path"
       },
