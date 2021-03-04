@@ -27,13 +27,18 @@ let
       networking.ssh
     ];
     
-    mediaHost = with media;[ 
+    mediaHost = with media; [ 
       jellyfin
       rtorrent
       plex
     ];
+
+    cicd = with cicd; [
+      jenkins
+      gitea
+    ];
     
-    basedlan = mediaHost ++ [
+    basedlan = mediaHost ++ cicd ++ [
       media.rutorrent
       webserver.nginx
     ];
