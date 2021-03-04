@@ -1,4 +1,4 @@
-{ suites, lib, config, pkgs, ... }:
+{ suites, lib, config, pkgs, boot, backups, ... }:
 {
   imports = with suites; lib.concatLists [ base desktopStack ] ++ [ boot.systemd-boot backups.borg.gamer-laptop ];
 
