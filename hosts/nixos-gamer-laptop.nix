@@ -1,6 +1,6 @@
 {lib, config, pkgs, ... }:
 {
-  imports = with suites; lib.concatLists [ base desktopStack];
+  imports = with suites; lib.concatLists [ base desktopStack ];
 
   boot = {
     supportedFilesystems = [ "ntfs"] ;
@@ -12,7 +12,7 @@
 
 
   environment.shellAliases = {
-    upd = "sudo nixos-rebuild switch --upgrade --flake ~/git/basedconfig#nixos-gamer-laptop";
+    upd = "sudo nixos-rebuild switch --upgrade --flake .#nixos-gamer-laptop";
   };
     
   networking = {
