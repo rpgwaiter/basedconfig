@@ -1,6 +1,6 @@
-{ suites, lib, config, pkgs, ... }:
+{ profiles, suites, lib, config, pkgs, ... }:
 {
-  imports = with suites; lib.concatLists [ base desktopStack ];
+  imports = with suites; lib.concatLists [ base desktopStack profiles.boot.systemd-boot ];
 
   boot = {
     supportedFilesystems = [ "ntfs"] ;
