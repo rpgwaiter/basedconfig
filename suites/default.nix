@@ -43,7 +43,7 @@ let
       gitea
     ];
     
-    basedlan = mediaHost ++ cicd ++ networkStack ++ [
+    basedlan = mediaHost ++ cicd ++ [
       media.rutorrent
       webserver.nginx
     ];
