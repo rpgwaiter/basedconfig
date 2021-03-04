@@ -15,6 +15,7 @@
 , ... }:
 let 
     inherit (stdenv) mkDerivation;
+    inherit (srcs) rutorrent;
     configFile = writeText "config.php" ''
     <?php
         // configuration parameters
@@ -86,13 +87,13 @@ let
 
         $locale = "UTF8";
     '';
-    version = lib.flk.mkVersion srcs.rutorrent;
+    version = lib.flk.mkVersion rutorrent;
 in
     stdenv.mkDerivation rec {
         pname = "rutorrent";
         inherit version;
 
-        srcs = srcs.rutorrent;
+        src = rutorrent;
 
         installPhase = ''
             export HOME=".";
