@@ -12,7 +12,7 @@
 , fetchFromGitHub
 , srcs
 , lib
-, ... }:
+}:
 let 
     inherit (stdenv) mkDerivation;
     inherit (srcs) rutorrent;
