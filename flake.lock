@@ -183,11 +183,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1614821342,
-        "narHash": "sha256-vjR80M2DbN0XLCxYZ09VhdxVZrtf4awAG81saL3CJvQ=",
+        "lastModified": 1614825110,
+        "narHash": "sha256-RDPFUw9hh09S2KY510zeDQtiSB9bBtEWZ63ZpPc5irI=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "4c87afc4c85d5e063f9fae9db93a318dbaec5b9c",
+        "rev": "74128c5f272e6b22dd891ef6107d78616b8c05ec",
         "type": "github"
       },
       "original": {
@@ -262,7 +262,7 @@
         "rutorrent": "rutorrent"
       },
       "locked": {
-        "narHash": "sha256-0JQ1zKP1UY+4gztwG2PBNep/vXxO/R3nQ5oK7jyXclw=",
+        "narHash": "sha256-30sPVt9dZB4cNYGBp6tf09q3gl0L7TLjAID7X6RXajs=",
         "path": "./pkgs",
         "type": "path"
       },
