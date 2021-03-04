@@ -1,4 +1,5 @@
-{ stdenv
+{ lib
+, stdenv
 , writeText
 , php
 , procps
@@ -11,11 +12,10 @@
 , sox
 , fetchFromGitHub
 , srcs
-, lib
 }:
 let 
     inherit (stdenv) mkDerivation;
-    inherit (srcs) rutorrent;
+    src = srcs.rutorrent;
     configFile = writeText "config.php" ''
     <?php
         // configuration parameters
