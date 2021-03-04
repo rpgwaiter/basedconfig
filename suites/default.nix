@@ -27,11 +27,15 @@ let
       networking.ssh
     ];
 
+    basegui = [
+      backups.syncthing
+      filesystems.mount-nfs
+    ];
+
     # Desktop
-    desktopStack = [
+    desktopStack = basegui ++ [
       desktop
       email
-      backups.syncthing
     ];
 
     # Servers

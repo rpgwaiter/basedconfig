@@ -1,24 +1,6 @@
 {lib, config, pkgs, ... }:
 {
-   imports = with lib.lists;
-    map (x: ../.  + "/${x}") (flatten 
-    [
-      (map (x: "users/${x}")    [ "robots" "root" "borg" "storage" ])
-      (map (x: "profiles/${x}") [
-        "desktop"
-        "dev"
-        "social"
-        "networking/ssh"
-        "music"
-        "email"
-        "printing"
-        "backups/borg/gamer-laptop"
-        "hardware/yubikey"
-        "filesystems/mount-nfs"
-        "backups/syncthing"
-        "boot/systemd-boot"
-      ])
-    ]);
+  imports = with suites; lib.concatLists [ base desktopStack];
 
   boot = {
     supportedFilesystems = [ "ntfs"] ;
