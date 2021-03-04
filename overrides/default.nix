@@ -9,13 +9,9 @@
   # packages pulled from override
   packages = pkgs: final: prev: {
     inherit (pkgs)
-      dhall
       discord
-      element-desktop
-      manix
       nixpkgs-fmt
       nixFlakes
-      qutebrowser
       signal-desktop
       starship;
 
