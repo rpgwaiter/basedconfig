@@ -26,6 +26,11 @@ let
       users.jenkins
       networking.ssh
     ];
+
+    network = with networking; [
+      unifi
+      netboot
+    ];
     
     mediaHost = with media; [ 
       jellyfin
@@ -38,7 +43,7 @@ let
       gitea
     ];
     
-    basedlan = mediaHost ++ cicd ++ [
+    basedlan = mediaHost ++ cicd ++ network ++ [
       media.rutorrent
       webserver.nginx
     ];
