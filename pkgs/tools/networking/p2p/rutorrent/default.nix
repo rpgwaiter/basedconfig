@@ -92,8 +92,7 @@ in
     stdenv.mkDerivation rec {
         pname = "rutorrent";
         inherit version;
-
-        src = rutorrent;
+        inherit src;
 
         installPhase = ''
             export HOME=".";
