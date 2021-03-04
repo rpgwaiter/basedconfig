@@ -27,7 +27,7 @@ let
       networking.ssh
     ];
 
-    network = with networking; [
+    networkStack = with networking; [
       unifi
       netboot
     ];
@@ -43,7 +43,7 @@ let
       gitea
     ];
     
-    basedlan = mediaHost ++ cicd ++ network ++ [
+    basedlan = mediaHost ++ cicd ++ networkStack ++ [
       media.rutorrent
       webserver.nginx
     ];
