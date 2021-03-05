@@ -27,17 +27,17 @@ let
       networking.ssh
     ];
 
-    networkStack = base ++ [
+    networkStack = [
       networking.unifi
     ];
     
-    mediaHost = base ++ [ 
+    mediaHost = [ 
       media.jellyfin
       media.rtorrent
       media.plex
     ];
 
-    cicd = base ++ [
+    cicd = [
       cicd.jenkins
       cicd.gitea
     ];
