@@ -26,18 +26,18 @@ let
       users.jenkins
       networking.ssh
     ];
-    
-    networkStack = with networking; [
+
+    networkStack = with networking; base ++ [
       unifi
     ];
     
-    mediaHost = with media; [ 
+    mediaHost = with media; base ++ [ 
       jellyfin
       rtorrent
       plex
     ];
 
-    cicd = with cicd; [
+    cicd = with cicd; base ++ [
       jenkins
       gitea
     ];
@@ -47,7 +47,7 @@ let
       webserver.nginx
     ];
     
-    nas = with filesystems; [
+    nas = with filesystems; base ++ [
       export-nfs
       export-smb
       mount-zfs
