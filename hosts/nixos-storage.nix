@@ -5,7 +5,7 @@
   ## ALIASES ##
   environment.shellAliases = {
     upd = "sudo nixos-rebuild switch --upgrade --flake .#nixos-storage";
-    cf = "sudo cloudflared tunnel --hostname ssh.based).zone --url ssh://localhost:50022";
+    cf = "sudo cloudflared tunnel --hostname ssh.based.zone --url ssh://localhost:50022";
   };  
   ## END ALIASES ##
     
