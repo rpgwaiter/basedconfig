@@ -12,6 +12,12 @@
             add_header X-Content-Type-Options "nosniff";
         '';
         locations."/" = {  index = "index.html"; };
+        locations."/RPC2" = {
+            extraConfig = ''
+            include scgi_params;
+            scgi_pass localhost:5000;
+        '';
+        };
         locations."~ \.php$".extraConfig = ''
             fastcgi_pass  unix:${config.services.phpfpm.pools.media.socket};
             fastcgi_index index.php;
