@@ -60,6 +60,7 @@ let
       "gzip" =>     '${gzip}/bin/gzip',
       "id" =>       '${coreutils}/bin/id',
       "stat" =>     '${coreutils}/bin/stat',
+    );
 
     $localhosts = array(
       "127.0.0.1",
