@@ -7,9 +7,6 @@
 , curl
 , gzip
 , coreutils
-, ffmpeg
-, mediainfo
-, sox
 , fetchFromGitHub
 , srcs
 }:
@@ -63,10 +60,6 @@ let
       "gzip" =>     '${gzip}/bin/gzip',
       "id" =>       '${coreutils}/bin/id',
       "stat" =>     '${coreutils}/bin/stat',
-      "ffmpeg =>    '${ffmpeg}/bin/ffmpeg',
-      "mediainfo => '${mediainfo}/bin/mediainfo',
-      "sox" =>      '${sox}/bin/sox',
-    );
 
     $localhosts = array(
       "127.0.0.1",
