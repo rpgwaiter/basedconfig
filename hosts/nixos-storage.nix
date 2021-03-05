@@ -1,11 +1,11 @@
 { suites, config, lib, pkgs, inputs, ... }: 
 {
-  imports = with suites; lib.concatLists [ base basedlan nas ];
+  imports = with suites; lib.concatLists ([ base basedlan nas ]);
 
   ## ALIASES ##
   environment.shellAliases = {
     upd = "sudo nixos-rebuild switch --upgrade --flake .#nixos-storage";
-    cf = "sudo cloudflared tunnel --hostname ssh.based.zone --url ssh://localhost:50022";
+    cf = "sudo cloudflared tunnel --hostname ssh.based).zone --url ssh://localhost:50022";
   };  
   ## END ALIASES ##
     
