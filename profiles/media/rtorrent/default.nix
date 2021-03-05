@@ -23,7 +23,9 @@
             method.insert = cfg.logfile, private|const|string, (cat,(cfg.logs),(system.time),".log")
             method.insert = cfg.rpcsock, private|const|string, (cat,"${rpcSocket}")
             # Create instance directories
-            execute.throw = sh, -c, (cat, "mkdir -p ", (cfg.basedir), "/session ", (cfg.watch), " ", (cfg.logs))
+            execute.throw = sh, -c, (cat, "mkdir -p ", (cfg.basedir), "/session ", 
+            #(cfg.watch), 
+            " ", (cfg.logs))
             # Listening port for incoming peer traffic (fixed; you can also randomize it)
             network.port_range.set = ${toString port}-${toString port}
             network.port_random.set = no
