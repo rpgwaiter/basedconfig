@@ -10,6 +10,7 @@
         dataDir = "/mnt/private/nix-config-store/rtorrent";
         port = 5000;
         rpcSocket = "/run/rtorrent/rpc.sock";
+        /*
         services.rtorrent.configText = lib.mkForce ''
             # Instance layout (base paths) 
             method.insert = cfg.basedir, private|const|string, (cat,"${dataDir}/")
@@ -78,5 +79,6 @@
             schedule = scgi_group,0,0,"execute.nothrow=chown,\":rtorrent\",(cfg.rpcsock)"
             schedule = scgi_permission,0,0,"execute.nothrow=chmod,\"g+w,o=\",(cfg.rpcsock)"
         '';
+        */
     };
 }
