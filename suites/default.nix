@@ -42,6 +42,7 @@ let
     basedlan = mediaHost ++ pipeline ++ [
       media.rutorrent
       webserver.nginx
+      security.bitwarden
     ];
     
     nas = basedlan ++ [
