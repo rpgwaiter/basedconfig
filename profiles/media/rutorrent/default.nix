@@ -14,7 +14,6 @@
         locations."/" = {  index = "index.html"; };
         locations."/RPC2" = {
             extraConfig = ''
-            include scgi_params;
             scgi_pass localhost:5000;
         '';
         };
