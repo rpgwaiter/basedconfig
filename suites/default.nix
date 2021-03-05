@@ -34,12 +34,12 @@ let
       media.plex
     ];
 
-    cicd = [
+    pipeline = [
       cicd.jenkins
       cicd.gitea
     ];
     
-    basedlan = mediaHost ++ cicd ++ [
+    basedlan = mediaHost ++ pipeline ++ [
       media.rutorrent
       webserver.nginx
     ];
