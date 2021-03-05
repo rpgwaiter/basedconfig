@@ -31,7 +31,7 @@ let
       networking.unifi
     ];
     
-    mediaHost = [ 
+    mediaHost = [
       media.jellyfin
       media.rtorrent
       media.plex
