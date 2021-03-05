@@ -11,7 +11,7 @@
         port = 5000;
         rpcSocket = "/run/rtorrent/rpc.sock";
         services.rtorrent.configText = lib.mkForce ''
-            # Instance layout (base paths)
+            # Instance layout (base paths) 
             method.insert = cfg.basedir, private|const|string, (cat,"${dataDir}/")
 
             #method.insert = cfg.watch,   private|const|string, (cat,(cfg.basedir),"watch/")
