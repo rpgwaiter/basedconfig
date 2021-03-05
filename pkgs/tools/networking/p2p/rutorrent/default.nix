@@ -34,7 +34,7 @@ let
     $do_diagnostic = true;
     //$log_file = ;              // path to log file (comment or leave blank to disable logging)
 
-    $saveUploadedTorrents = false;           // Save uploaded torrents to profile/torrents directory or not
+    // $saveUploadedTorrents = false;           // Save uploaded torrents to profile/torrents directory or not
     $overwriteUploadedTorrents = false;     // Overwrite existing uploaded torrents in profile/torrents directory or make unique name
 
     $topDirectory = '/';                    // Upper available directory. Absolute path with trail slash.
@@ -70,7 +70,8 @@ let
     $profilePath = '/mnt/private/nix-config-store/rutorrent/profiles';
     $profileMask = 0770;
 
-    $tempDirectory = '/mnt/private/nix-config-store/rutorrent/profiles/tmp/';                     // Temp directory. Absolute path with trail slash. If null, then autodetect will be used.
+    //$tempDirectory = '/mnt/private/nix-config-store/rutorrent/profiles/tmp/';                     // Temp directory. Absolute path with trail slash. If null, then autodetect will be used.
+    $tempDirectory = null;
 
     $canUseXSendFile = true;                // Use X-Sendfile feature if it exist
 
