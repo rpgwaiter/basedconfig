@@ -3,7 +3,8 @@
   imports = [ ../php ];
   security.acme = { email = "rpgwaiter@based.zone"; acceptTerms = true; };
   services.phpfpm.pools.www = {
-    user = "nobody";                                                                                                                                                                                                                        
+    user = "nginx"; 
+    group = "storage";                                                                                                                                                                                                                       
     settings = {                                                                                                                                                                                                                               
       pm = "dynamic";            
       "listen.owner" = config.services.nginx.user;                                                                                                                                                                                                              
@@ -17,6 +18,7 @@
   services.nginx = {
       package = pkgs.nginxMainline;
       enable = true;
+      user = "nginx";
       group = "storage";
       recommendedProxySettings = true;
       recommendedTlsSettings = true;
