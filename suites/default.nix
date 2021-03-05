@@ -44,7 +44,7 @@ let
       webserver.nginx
     ];
     
-    nas = base ++ [
+    nas = basedlan ++ [
       filesystems.export-nfs
       filesystems.export-smb
       filesystems.mount-zfs
