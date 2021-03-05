@@ -24,6 +24,17 @@ let
       networking.ssh
     ];
 
+    basegui = [
+      backups.syncthing
+      filesystems.mount-nfs
+    ];
+
+    desktopStack = basegui ++ [
+      desktop
+      email.client
+      backups.syncthing
+    ];
+
     networkStack = [
       networking.unifi
     ];
