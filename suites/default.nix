@@ -27,19 +27,19 @@ let
       networking.ssh
     ];
 
-    networkStack = with networking; base ++ [
-      unifi
+    networkStack = base ++ [
+      networking.unifi
     ];
     
-    mediaHost = with media; base ++ [ 
-      jellyfin
-      rtorrent
-      plex
+    mediaHost = base ++ [ 
+      media.jellyfin
+      media.rtorrent
+      media.plex
     ];
 
-    cicd = with cicd; base ++ [
-      jenkins
-      gitea
+    cicd = base ++ [
+      cicd.jenkins
+      cicd.gitea
     ];
     
     basedlan = mediaHost ++ cicd ++ [
@@ -47,10 +47,10 @@ let
       webserver.nginx
     ];
     
-    nas = with filesystems; base ++ [
-      export-nfs
-      export-smb
-      mount-zfs
+    nas = base ++ [
+      filesystems.export-nfs
+      filesystems.export-smb
+      filesystems.mount-zfs
     ];
 
   };
