@@ -1,9 +1,9 @@
 { suites, lib, config, pkgs, ... }:
 {
   imports = with suites; lib.concatLists [ base desktopStack ] ++ [
-      ../profiles/boot/systemd-boot
-      ../profiles/backups/borg/gamer-laptop 
-    ];
+    ../profiles/boot/systemd-boot
+    ../profiles/backups/borg/gamer-laptop 
+  ];
 
   boot = {
     supportedFilesystems = [ "ntfs"] ;
@@ -12,7 +12,6 @@
     kernelModules = [ "kvm-intel" ];
   };
   hardware.enableRedistributableFirmware = true;
-
 
   environment.shellAliases = {
     upd = "sudo nixos-rebuild switch --upgrade --flake .#nixos-gamer-laptop";
