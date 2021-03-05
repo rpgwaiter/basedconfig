@@ -16,9 +16,6 @@ let
 
 
   suites = with profiles; rec {
-    /*
-    base = [ users.nixos users.root ];
-    */
     
     base = [
       users.robots
