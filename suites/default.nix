@@ -26,19 +26,7 @@ let
       users.jenkins
       networking.ssh
     ];
-
-    basegui = [
-      backups.syncthing
-      filesystems.mount-nfs
-    ];
-
-    # Desktop
-    desktopStack = basegui ++ [
-      desktop
-      email.client
-    ];
-
-    # Servers
+    
     networkStack = with networking; [
       unifi
     ];
