@@ -1,6 +1,6 @@
 { suites, config, lib, pkgs, inputs, ... }: 
 {
-  imports = with suites; lib.concatLists ([ basedlan nas ]);
+  imports = with suites; lib.concatLists ([ base nas ]);
 
   ## ALIASES ##
   environment.shellAliases = {
