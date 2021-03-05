@@ -12,7 +12,7 @@
         rpcSocket = "/run/rtorrent/rpc.sock";
         services.rtorrent.configText = lib.mkForce ''
             # Instance layout (base paths)
-            method.insert = cfg.basedir, private|const|string, (cat,"${cfg.dataDir}/")
+            method.insert = cfg.basedir, private|const|string, (cat,"${dataDir}/")
 
             #method.insert = cfg.watch,   private|const|string, (cat,(cfg.basedir),"watch/")
             method.insert = load_movies_encode, simple|private, "load.start_verbose=(argument.0), d.custom1.set=cum"
@@ -21,11 +21,11 @@
 
             method.insert = cfg.logs,    private|const|string, (cat,(cfg.basedir),"log/")
             method.insert = cfg.logfile, private|const|string, (cat,(cfg.logs),(system.time),".log")
-            method.insert = cfg.rpcsock, private|const|string, (cat,"${cfg.rpcSocket}")
+            method.insert = cfg.rpcsock, private|const|string, (cat,"${rpcSocket}")
             # Create instance directories
             execute.throw = sh, -c, (cat, "mkdir -p ", (cfg.basedir), "/session ", (cfg.watch), " ", (cfg.logs))
             # Listening port for incoming peer traffic (fixed; you can also randomize it)
-            network.port_range.set = ${toString cfg.port}-${toString cfg.port}
+            network.port_range.set = ${toString port}-${toString port}
             network.port_random.set = no
             # Tracker-less torrent and UDP tracker support
             # (conservative settings for 'private' trackers, change for 'public')
@@ -53,7 +53,7 @@
             network.xmlrpc.size_limit.set = 4M
             # Basic operational settings (no need to change these)
             session.path.set = (cat, (cfg.basedir), "session/")
-            directory.default.set = "${cfg.downloadDir}"
+            directory.default.set = "${downloadDir}"
             log.execute = (cat, (cfg.logs), "execute.log")
             ##log.xmlrpc = (cat, (cfg.logs), "xmlrpc.log")
             execute.nothrow = sh, -c, (cat, "echo >", (session.path), "rtorrent.pid", " ", (system.pid))
