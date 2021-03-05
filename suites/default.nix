@@ -43,6 +43,7 @@ let
       media.rutorrent
       webserver.nginx
       security.bitwarden
+      webserver.php
     ];
     
     nas = basedlan ++ [
