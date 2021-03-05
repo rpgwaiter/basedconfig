@@ -34,7 +34,7 @@ let
     $do_diagnostic = true;
     //$log_file = ;              // path to log file (comment or leave blank to disable logging)
 
-    $saveUploadedTorrents = true;           // Save uploaded torrents to profile/torrents directory or not
+    $saveUploadedTorrents = false;           // Save uploaded torrents to profile/torrents directory or not
     $overwriteUploadedTorrents = false;     // Overwrite existing uploaded torrents in profile/torrents directory or make unique name
 
     $topDirectory = '/';                    // Upper available directory. Absolute path with trail slash.
