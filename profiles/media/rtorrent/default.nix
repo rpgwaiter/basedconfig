@@ -10,7 +10,7 @@
         dataDir = "/mnt/private/nix-config-store/rtorrent";
         port = 5000;
         rpcSocket = "/run/rtorrent/rpc.sock";
-        services.rtorrent.configText = lib.mkForce ''
+        configText = lib.mkForce ''
             # Instance layout (base paths) 
             method.insert = cfg.basedir, private|const|string, (cat,"${dataDir}/")
 
