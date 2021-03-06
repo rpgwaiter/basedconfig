@@ -8,7 +8,7 @@
         group = "storage";
         downloadDir = "/mnt/public";
         dataDir = "/mnt/private/nix-config-store/rtorrent";
-        port = 5000;
+        port = 50000;
         rpcSocket = "/run/rtorrent/rpc.sock";
         configText = lib.mkForce ''
             # Instance layout (base paths) 
