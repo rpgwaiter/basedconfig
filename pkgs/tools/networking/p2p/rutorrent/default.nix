@@ -53,13 +53,18 @@ let
     $XMLRPCMountPoint = "/RPC2";            // DO NOT DELETE THIS LINE!!! DO NOT COMMENT THIS LINE!!!
 
     $pathToExternals = array(
-      "php" =>      '${php}/bin/php',
-      "pgrep" =>    '${procps}/bin/pgrep',
-      "python" =>   '${python39}/bin/python3',
-      "curl" =>     '${curl}/bin/curl',
-      "gzip" =>     '${gzip}/bin/gzip',
-      "id" =>       '${coreutils}/bin/id',
-      "stat" =>     '${coreutils}/bin/stat',
+      "php" =>       '${php}/bin/php',
+      "pgrep" =>     '${procps}/bin/pgrep',
+      "python" =>    '${python39}/bin/python3',
+      "curl" =>      '${curl}/bin/curl',
+      "gzip" =>      '${gzip}/bin/gzip',
+      "id" =>        '${coreutils}/bin/id',
+      "mediainfo" => '${mediainfo}/bin/mediainfo',
+      "ffmpeg" =>    '${ffmpeg}/bin/ffmpeg',
+      "sox" =>       '${sox}bin/sox',
+      "stat" =>      '${coreutils}/bin/stat',
+      "unzip" =>     '${unzip}/bin/unzip',
+      "unrar" =>     '${unrar}/bin/unrar',
     );
 
     $localhosts = array(
