@@ -11,6 +11,9 @@ pipeline {
             stages {
                 stage("flk update") {
                     steps {
+                        echo 'entering nix-shell'
+                        sh 'nix-shell'
+                        echo 'updating flake lock file'
                         sh 'flk update'
                     }
                 }
