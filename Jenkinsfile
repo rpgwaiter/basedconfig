@@ -11,9 +11,14 @@ pipeline {
             stages {
                 stage("direnv setup") {
                     steps {
-                        echo "load direnv"
+                        echo "load devshell"
                         sh "direnv export bash"
                         sh "direnv allow ."
+                    }
+                }
+                stage("update lock file") {
+                    steps {
+                        sh "flk update"
                     }
                 }
             }
