@@ -9,10 +9,13 @@ pipeline {
     stages {
         stage("Upgrade Storage") {
             stages {
-                stage("flk update") {
+                stage("direnv setup") {
                     steps {
-                        echo "setting up direnv"
+                        echo "load direnv"
                         sh "eval 'direnv hook bash'"
+
+                        echo "load .envrc"
+                        sh "direnv allow ."
                     }
                 }
             }
