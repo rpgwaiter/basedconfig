@@ -93,13 +93,13 @@ in
   };
 
   fonts = {
-    fonts = with pkgs; [ powerline-fonts dejavu_fonts ];
+    fonts = with pkgs; [ powerline-fonts dejavu_fonts ubuntu_font_family ];
 
     fontconfig.defaultFonts = {
 
-      monospace = [ "DejaVu Sans Mono for Powerline" ];
+      monospace = [ "Ubuntu Mono" ];
 
-      sansSerif = [ "DejaVu Sans" ];
+      sansSerif = [ "Ubuntu Regular" ];
 
     };
   };
