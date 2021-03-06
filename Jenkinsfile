@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage("Upgrade Storage") {
             steps {
-                withCredentials([file(git-crypt-key: '', variable: 'CRYPT_KEY')]) {
+                withCredentials([file(credentialsId: 'git-crypt-key', variable: 'CRYPT_KEY')]) {
                     sh '''
                         #!/bin/bash -ex
                         direnv allow .
