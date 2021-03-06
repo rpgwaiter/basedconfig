@@ -5,6 +5,7 @@ in
   nix.package = pkgs.nixFlakes;
 
   nix.systemFeatures = [ "nixos-test" "benchmark" "big-parallel" "kvm" ];
+  time.timeZone = "America/Chicago";
 
   environment = {
 
