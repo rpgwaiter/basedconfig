@@ -11,7 +11,7 @@ pipeline {
             steps {
                 withCredentials([file(credentialsId: 'git-crypt-key', variable: 'CRYPT_KEY')]) {
                     echo "decrypting repo"
-                    sh "git-crypt unlock $CRYPT_KEY"
+                    sh 'git-crypt unlock $CRYPT_KEY'
 
                     sh '''
                         #!/bin/bash -ex
