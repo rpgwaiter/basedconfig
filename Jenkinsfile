@@ -10,7 +10,9 @@ pipeline {
         stage("Upgrade Storage") {
             stages {
                 stage("flk update") {
-                    sh 'flk update'
+                    steps {
+                        sh 'flk update'
+                    }
                 }
             }
         }
