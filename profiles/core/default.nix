@@ -18,6 +18,7 @@ in
       dosfstools
       fd
       git
+      git-crypt
       gotop
       gptfdisk
       iputils
