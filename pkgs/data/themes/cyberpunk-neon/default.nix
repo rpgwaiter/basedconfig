@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation rec {
   pname = "cyberpunk-neon";
-  version = "unstable-2021-02-02";
+  version = "unstable-b4b293c";
 
   src = fetchFromGitHub {
     owner = "Roboron3042";
