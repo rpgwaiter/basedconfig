@@ -13,13 +13,13 @@ pipeline {
                     echo 'decrypting repo'
                     sh 'git-crypt unlock $CRYPT_KEY'
 
-                    echo 'updating '
+                    echo 'updating nas'
                     sh '''
                         #!/bin/bash -ex
                         direnv allow .
                         eval "$(direnv export bash)"
                         flk update
-                        flk nixos-storage switch
+                        nohup flk nixos-storage switch
                     '''
                 }
             }
