@@ -17,7 +17,7 @@ pipeline {
                     flk update
                 '''
 
-                echo "flk nixos-storage switch"
+                sh "flk nixos-storage switch"
             }
         }
     }
