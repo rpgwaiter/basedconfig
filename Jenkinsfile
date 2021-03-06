@@ -9,14 +9,15 @@ pipeline {
     stages {
         stage("Upgrade Storage") {
             steps {
-                echo "update flake"
-                sh '''
-                    #!/bin/bash -ex
-                    direnv allow .
-                    eval "$(direnv export bash)"
-                    flk update
-                    flk nixos-storage switch
-                '''
+                withCredentials([file(git-crypt-key: '', variable: 'CRYPT_KEY')]) {
+                    sh '''
+                        #!/bin/bash -ex
+                        direnv allow .
+                        eval "$(direnv export bash)"
+                        flk update
+                        flk nixos-storage switch
+                    '''
+                }
             }
         }
     }
