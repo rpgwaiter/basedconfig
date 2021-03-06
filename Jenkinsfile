@@ -10,7 +10,12 @@ pipeline {
         stage("Upgrade Storage") {
             steps {
                 echo "load devshell"
-                sh "direnv export bash && flk update"
+                sh '''
+                    #!/bin/bash -ex
+                    direnv allow .
+                    eval "$(direnv export bash)"
+                    flk update
+                '''
             }
         }
     }
