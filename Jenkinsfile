@@ -9,13 +9,15 @@ pipeline {
     stages {
         stage("Upgrade Storage") {
             steps {
-                echo "load devshell"
+                echo "update flake"
                 sh '''
                     #!/bin/bash -ex
                     direnv allow .
                     eval "$(direnv export bash)"
                     flk update
                 '''
+
+                echo "flk nixos-storage switch"
             }
         }
     }
