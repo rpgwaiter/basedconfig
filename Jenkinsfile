@@ -11,8 +11,8 @@ pipeline {
             stages {
                 stage("flk update") {
                     steps {
-                        echo 'updating flake lock file'
-                        sh "#!${which nix-shell} \n" + 'flk update'
+                        echo "setting up direnv"
+                        sh "eval '${direnv hook bash}' && direnv allow ."
                     }
                 }
             }
