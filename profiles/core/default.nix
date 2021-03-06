@@ -127,13 +127,14 @@ in
 
   };
 
-  programs.bash = {
-    promptInit = ''
-      eval "$(${pkgs.starship}/bin/starship init bash)"
-    '';
-    interactiveShellInit = ''
-      eval "$(${pkgs.direnv}/bin/direnv hook bash)"
-    '';
+  programs.fish = {
+    enable = true;
+    # promptInit = ''
+    #   eval "(${pkgs.starship}/bin/starship init fish)"
+    # '';
+    # shellInit = ''
+    #   eval "(${pkgs.direnv}/bin/direnv hook fish)"
+    # '';
   };
 
   services.earlyoom.enable = true;
