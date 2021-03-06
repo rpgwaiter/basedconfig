@@ -12,7 +12,7 @@ pipeline {
                 stage("flk update") {
                     steps {
                         echo "setting up direnv"
-                        sh "direnv hook bash"
+                        sh "eval 'direnv hook bash'"
                     }
                 }
             }
