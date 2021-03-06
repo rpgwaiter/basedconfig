@@ -8,19 +8,11 @@ pipeline {
 
     stages {
         stage("Upgrade Storage") {
-            stages {
-                stage("direnv setup") {
-                    steps {
-                        echo "load devshell"
-                        sh "direnv export bash"
-                        sh "direnv allow ."
-                    }
-                }
-                stage("update lock file") {
-                    steps {
-                        sh "flk update"
-                    }
-                }
+            steps {
+                echo "load devshell"
+                sh '''
+                    direnv export bash
+                    flk update
             }
         }
     }
