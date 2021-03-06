@@ -13,6 +13,7 @@ pipeline {
                 sh '''
                     direnv export bash
                     flk update
+                '''
             }
         }
     }
