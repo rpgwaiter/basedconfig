@@ -12,7 +12,7 @@ pipeline {
                 stage("flk update") {
                     steps {
                         echo 'updating flake lock file'
-                        sh "#!$(which nix-shell) \n" + 'flk update'
+                        sh "#!${which nix-shell} \n" + 'flk update'
                     }
                 }
             }
