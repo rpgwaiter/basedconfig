@@ -12,7 +12,7 @@ pipeline {
                 stage("direnv setup") {
                     steps {
                         echo "load direnv"
-                        sh "eval 'direnv hook bash'"
+                        sh "eval $(direnv hook bash)"
 
                         echo "load .envrc"
                         sh "direnv allow ."
