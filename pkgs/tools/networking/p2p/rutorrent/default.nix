@@ -1,12 +1,8 @@
 { lib
 , stdenv
 , writeText
-, php
-, procps
-, python39
-, curl
-, gzip
-, coreutils
+, php , procps , python39 , curl, gzip
+, coreutils, mediainfo, ffmpeg, sox, unzip, unrar
 , fetchFromGitHub
 , srcs
 }:
