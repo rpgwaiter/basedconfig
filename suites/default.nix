@@ -18,6 +18,7 @@ let
   suites = with profiles; rec {
 
     base = [
+      core
       users.robots
       users.root
       users.jenkins
