@@ -57,7 +57,7 @@ let
       "id" =>        '${coreutils}/bin/id',
       "mediainfo" => '${mediainfo}/bin/mediainfo',
       "ffmpeg" =>    '${ffmpeg}/bin/ffmpeg',
-      "sox" =>       '${sox}bin/sox',
+      "sox" =>       '${sox}/bin/sox',
       "stat" =>      '${coreutils}/bin/stat',
       "unzip" =>     '${unzip}/bin/unzip',
       "unrar" =>     '${unrar}/bin/unrar',
