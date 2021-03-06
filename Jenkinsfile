@@ -10,6 +10,9 @@ pipeline {
         stage("Upgrade Storage") {
             steps {
                 withCredentials([file(credentialsId: 'git-crypt-key', variable: 'CRYPT_KEY')]) {
+                    echo "decrypting repo"
+                    sh "git-crypt unlock $CRYPT_KEY"
+
                     sh '''
                         #!/bin/bash -ex
                         direnv allow .
