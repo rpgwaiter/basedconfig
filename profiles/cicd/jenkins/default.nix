@@ -9,7 +9,6 @@
     };
     packages = with pkgs; [
       direnv
-      nix-shell
       git
       stdenv
       config.programs.ssh.package
