@@ -16,7 +16,7 @@ let
 
 
   suites = with profiles; rec {
-    
+
     base = [
       users.robots
       users.root
@@ -31,6 +31,7 @@ let
 
     desktopStack = basegui ++ [
       desktop
+      dev
       email.client
       backups.syncthing
     ];
@@ -38,7 +39,7 @@ let
     networkStack = [
       networking.unifi
     ];
-    
+
     mediaHost = [
       media.jellyfin
       media.rtorrent
@@ -49,14 +50,14 @@ let
       cicd.jenkins
       cicd.gitea
     ];
-    
+
     basedlan = mediaHost ++ pipeline ++ [
       media.rutorrent
       webserver.nginx
       security.bitwarden
       webserver.php
     ];
-    
+
     nas = basedlan ++ [
       filesystems.export-nfs
       filesystems.export-smb
