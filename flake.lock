@@ -154,11 +154,11 @@
     },
     "nixos": {
       "locked": {
-        "lastModified": 1615028506,
-        "narHash": "sha256-OiRfJ81e/kDAtg6YOlaVbvXLZ6tbo2Av/SEC1qs4WnE=",
+        "lastModified": 1615088304,
+        "narHash": "sha256-8H26TfKkZzFDDKcDTpMQRNJwci00jXLeiMBLJDdsVc0=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "37b47da04ca50d17934881192e65ad2df83704b5",
+        "rev": "91d08bb1f2c4d18b028a8b778217fc115b051a71",
         "type": "github"
       },
       "original": {
@@ -184,11 +184,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1615048278,
-        "narHash": "sha256-gblQFXvgq0fW48TEfvC6/aJth4QA1sl/IYkZ4r4NSXA=",
+        "lastModified": 1615090863,
+        "narHash": "sha256-kIx4CIMYveQlDUVH11/CGBMiff3BoUeP6cbhC490UqU=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "2071841e9e35cabc0436755e520f8d1dfad57ae0",
+        "rev": "e0bdc375a74fccab087c05ca8b9480591eb43cdd",
         "type": "github"
       },
       "original": {
@@ -198,11 +198,11 @@
     },
     "override": {
       "locked": {
-        "lastModified": 1615048695,
-        "narHash": "sha256-9BFsUivlTnwdY0fTmqjAA1CMFl4+NzTAcHh9lPIpwvs=",
+        "lastModified": 1615099473,
+        "narHash": "sha256-9bbaxhrJkM7W7Vpc30s6aVBBUHLjtV9TKYkILY/rgFM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "7173ab6f8e67e83ff03572b709c7ef19af38bb43",
+        "rev": "374f9a7c3b913de2e8a056698fda5f860a6e8259",
         "type": "github"
       },
       "original": {
@@ -264,7 +264,7 @@
         "rutorrent": "rutorrent"
       },
       "locked": {
-        "narHash": "sha256-c0HR7MSFm7YwBlbF4NzKJeoVT77MnX4c+QYfEoyeXyU=",
+        "narHash": "sha256-egFijL8dZ4B0tlVqlRiiqTegoTglT4E33j5EeMRMANc=",
         "path": "./pkgs",
         "type": "path"
       },
