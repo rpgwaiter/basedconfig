@@ -29,6 +29,7 @@ in
       nmap
       ripgrep
       tealdeer
+      tmux
       utillinux
       whois
     ];
