@@ -88,7 +88,7 @@ in
         dcu = "sudo docker-compose up -d";
         s = "sudo systemctl";
         mkdir = "mkdir -p";
-        conf = "cd ~/git/basedconfig-ng";
+        conf = "cd ~/git/basedconfig";
         nas = "ssh nas";
         dc = "sudo docker-compose";
         pull = "git pull";
