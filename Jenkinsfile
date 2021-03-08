@@ -19,8 +19,8 @@ pipeline {
                         direnv allow .
                         eval "$(direnv export bash)"
                         flk update
-                        nixos-rebuild build .#nixos-storage
-                        nixos-rebuild build .#nixos-gamer-laptop
+                        nixos-rebuild build --flake .#nixos-storage
+                        nixos-rebuild build --flake .#nixos-gamer-laptop
                     '''
                 }
             }
