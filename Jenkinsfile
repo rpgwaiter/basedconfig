@@ -19,7 +19,6 @@ pipeline {
                         direnv allow .
                         eval "$(direnv export bash)"
                         flk update
-                        nohup flk nixos-storage switch
                     '''
                 }
             }
