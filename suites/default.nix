@@ -63,6 +63,7 @@ let
       filesystems.export-nfs
       filesystems.export-smb
       filesystems.mount-zfs
+      dev.binarycache
     ];
 
   };
