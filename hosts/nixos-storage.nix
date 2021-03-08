@@ -1,4 +1,4 @@
-{ suites, config, lib, pkgs, inputs, ... }: 
+{ suites, config, lib, pkgs, inputs, ... }:
 {
   imports = with suites; lib.concatLists ([ networkStack base nas ]);
 
@@ -6,9 +6,16 @@
   environment.shellAliases = {
     upd = "sudo nixos-rebuild switch --upgrade --flake .#nixos-storage";
     cf = "sudo cloudflared tunnel --hostname ssh.based.zone --url ssh://localhost:50022";
-  };  
+  };
   ## END ALIASES ##
-    
+
+  fileSystems."/nix" = {
+    fsType = "zfs";
+    device = "basedstorage12tb/encrypted/binarycache";
+    neededForBoot = true;
+    options = [ "noatime" ];
+  };
+
   ## BOOT ##
   boot = {
     loader.grub = { enable = true; version = 2; device = "/dev/sdb"; };
@@ -20,8 +27,8 @@
     kernelPackages = pkgs.linuxPackages_latest;
     extraModulePackages = [ ];
   };
-  fileSystems."/" = { device="/dev/disk/by-label/nixos"; fsType="ext4"; };
-  swapDevices = [{device="/dev/disk/by-uuid/079628dd-f49e-4c3e-abfa-3bbfb10c65ec";}];
+  fileSystems."/" = { device = "/dev/disk/by-label/nixos"; fsType = "ext4"; };
+  swapDevices = [{ device = "/dev/disk/by-uuid/079628dd-f49e-4c3e-abfa-3bbfb10c65ec"; }];
 
   ## NETWORKING ##
   networking = {
@@ -35,7 +42,7 @@
     };
   };
   ## END NETWORKING ##
-    
+
   ## USER SETTINGS ##
   users = {
     motd = "Keep it Based.";
@@ -47,7 +54,7 @@
   ## END USER SETTINGS ##
 
   ## SERVICES ##
-   services = {
+  services = {
     syncthing = {
       enable = true;
       guiAddress = "0.0.0.0:8384";
