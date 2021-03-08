@@ -3,6 +3,7 @@
   services.nix-serve = {
     enable = true;
     secretKeyFile = "/var/cache-priv-key.pem";
+    port = 5001;
   };
   services.nginx = {
     enable = true;

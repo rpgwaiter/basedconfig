@@ -6,6 +6,7 @@ in
 
   nix.systemFeatures = [ "nixos-test" "benchmark" "big-parallel" "kvm" ];
   time.timeZone = "America/Chicago";
+  nix.trustedBinaryCaches = [ "http://nas:5001" ];
 
   environment = {
 
