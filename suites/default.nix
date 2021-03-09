@@ -37,14 +37,18 @@ let
       backups.syncthing
     ];
 
-    networkStack = [
-      networking.unifi
+    mailStack = [
+
     ];
 
     mediaHost = [
       media.jellyfin
       media.rtorrent
       media.plex
+    ];
+
+    networkStack = [
+      networking.unifi
     ];
 
     pipeline = [
