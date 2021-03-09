@@ -1,6 +1,6 @@
 { suites, config, lib, pkgs, ... }:
 {
-  imports = suites.base ++ ../secrets/external-networking.nix;
+  imports = suites.base ++ [ ../secrets/external-networking.nix ];
 
   ## ALIASES ##
   environment.shellAliases = {
