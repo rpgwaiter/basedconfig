@@ -1,7 +1,6 @@
 { suites, config, lib, pkgs, ... }:
 {
-
-  imports = with suites; lib.concatLists [ base ../secrets/external-networking.nix ];
+  imports = suites.base ++ ../secrets/external-networking.nix;
 
   ## ALIASES ##
   environment.shellAliases = {
