@@ -57,6 +57,7 @@ let
       webserver.nginx
       security.bitwarden
       webserver.php
+      docker.trilium
     ];
 
     nas = basedlan ++ [
