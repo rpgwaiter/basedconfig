@@ -9,12 +9,13 @@
   };
   ## END ALIASES ##
 
-  fileSystems."/nix" = {
-    fsType = "zfs";
-    device = "basedstorage12tb/encrypted/binarycache";
-    neededForBoot = true;
-    options = [ "noatime" ];
-  };
+  # For later
+  # fileSystems."/nix" = {
+  #   fsType = "zfs";
+  #   device = "basedstorage12tb/encrypted/binarycache";
+  #   neededForBoot = true;
+  #   options = [ "noatime" ];
+  # };
 
   ## BOOT ##
   boot = {
