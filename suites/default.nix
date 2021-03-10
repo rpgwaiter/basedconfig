@@ -38,7 +38,7 @@ let
     ];
 
     mailStack = [
-
+      email.server
     ];
 
     mediaHost = [
