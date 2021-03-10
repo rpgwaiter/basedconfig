@@ -3,7 +3,7 @@
     enable = true;
     challengeResponseAuthentication = false;
     permitRootLogin = "no";
-    passwordAuthentication = true;
+    passwordAuthentication = false;
     forwardX11 = true;
     openFirewall = true;
   };
