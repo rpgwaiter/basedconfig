@@ -13,6 +13,7 @@
       nixpkgs-fmt
       nixFlakes
       signal-desktop
+      home-assistant
       starship;
 
     haskellPackages = prev.haskellPackages.override {
