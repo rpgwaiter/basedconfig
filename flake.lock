@@ -211,13 +211,29 @@
         "type": "indirect"
       }
     },
+    "organizr": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1614368592,
+        "narHash": "sha256-C7gz3IU6mqPRnX9ESWxtGvVOqTAC6R4zafQVNLbOEPY=",
+        "owner": "causefx",
+        "repo": "Organizr",
+        "rev": "f00da8a065c3e636511b0c6a3372f013cdacb9b3",
+        "type": "github"
+      },
+      "original": {
+        "owner": "causefx",
+        "repo": "Organizr",
+        "type": "github"
+      }
+    },
     "override": {
       "locked": {
-        "lastModified": 1615407398,
-        "narHash": "sha256-CAyo13nH+CNQ8zUNJ2Pp34UDMOJhmKUOBUJf7WPjnCk=",
+        "lastModified": 1615410905,
+        "narHash": "sha256-NvfZN8UpMDO/3RzrxpszZXBUeKXD5m6zlqVpsX55Xqs=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "58279ef1f0533b3b286b5ce88d463fa78b43ad89",
+        "rev": "7de94ba17706f4546045d6136ea258fde6057e03",
         "type": "github"
       },
       "original": {
@@ -295,11 +311,12 @@
     },
     "srcs": {
       "inputs": {
+        "organizr": "organizr",
         "rutorrent": "rutorrent",
         "simple-nixos-mailserver": "simple-nixos-mailserver"
       },
       "locked": {
-        "narHash": "sha256-HDsXZd34O96hbQwlzP61D6xFDXZKHVoieTpq87UdqQU=",
+        "narHash": "sha256-lV1pDpBUC4C2AhP0Bogv5gLnaTa3wN+9U1zldPHkbyk=",
         "path": "./pkgs",
         "type": "path"
       },
