@@ -1,16 +1,5 @@
 { config, pkgs, ... }:
 {
-  imports = let ver = "7627c29268d2f49ede330a806524447ad9cf9c3f"; in
-    [
-      (builtins.fetchTarball {
-        # Pick a commit from the branch you are interested in
-        url = "https://gitlab.com/simple-nixos-mailserver/nixos-mailserver/-/archive/${ver}/nixos-mailserver-${ver}.tar.gz";
-        # And set its hash
-        sha256 = "";
-      })
-    ];
-
-
   mailserver = {
     enable = true;
     fqdn = "nixos-external.noticesbul.ge";
