@@ -62,6 +62,9 @@ let
       security.bitwarden
       webserver.php
       docker.trilium
+      home.assistant
+      home.organizr
+      home.searx
     ];
 
     nas = basedlan ++ [
