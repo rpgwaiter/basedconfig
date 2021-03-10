@@ -1,3 +1,1 @@
-[
-  ./simple-nixos-mailserver.nix
-]
+[ ]

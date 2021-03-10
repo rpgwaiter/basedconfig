@@ -1,5 +1,6 @@
-{ config, pkgs, ... }:
+{ srcs, config, pkgs, ... }:
 {
+  inherit (srcs) simple-nixos-mailserver;
   mailserver = {
     enable = true;
     fqdn = "nixos-external.noticesbul.ge";
