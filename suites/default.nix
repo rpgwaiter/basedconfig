@@ -63,6 +63,7 @@ let
       security.bitwarden
       webserver.php
       docker.trilium
+      home.grocy
       # home.assistant
       # home.organizr
       # home.searx
