@@ -2,12 +2,6 @@
 {
   imports = suites.base ++ [ ../secrets/external-networking.nix ];
 
-  ## ALIASES ##
-  environment.shellAliases = {
-    upd = "sudo nixos-rebuild switch --flake .#nixos-external";
-  };
-  ## END ALIASES ##
-
   ## BOOT ##
   boot = {
     loader.grub.enable = true;
