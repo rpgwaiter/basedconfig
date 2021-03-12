@@ -1,6 +1,6 @@
 { suites, config, lib, pkgs, inputs, ... }:
 {
-  imports = with suites; lib.concatLists ([ networkStack base /*nas*/ ]);
+  imports = with suites; lib.concatLists ([ networkStack base nas ]);
 
   ## ALIASES ##
   environment.shellAliases = {
