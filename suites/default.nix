@@ -25,12 +25,16 @@ let
       networking.ssh
     ];
 
+    baseClient = [
+      users.robots.client
+    ];
+
     basegui = [
       backups.syncthing
       filesystems.mount-nfs
     ];
 
-    desktopStack = basegui ++ [
+    desktopStack = basegui ++ baseClient ++ [
       desktop
       dev
       email.client
