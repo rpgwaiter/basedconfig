@@ -20,6 +20,9 @@
       add_header X-Content-Type-Options "nosniff";
     '';
     locations."/" = { index = "index.php"; };
+    locations."/api/v2".extraConfig = ''
+      try_files $uri ${pkgs.organizr}/api/v2/index.php$is_args$args;
+    '';
     locations."~ \.php$".extraConfig = ''
       fastcgi_pass  unix:${config.services.phpfpm.pools.organizr.socket};
       fastcgi_index index.php;
