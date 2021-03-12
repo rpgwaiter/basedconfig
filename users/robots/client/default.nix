@@ -6,7 +6,7 @@
     matchBlocks = {
       "nixos-storage" = {
         host = "nas";
-        identityFile = ../secrets/ssh/robots_ed25519;
+        identityFile = toString ../secrets/ssh/robots_ed25519;
         identitiesOnly = true;
         extraOptions = { AddKeysToAgent = "yes"; };
       };
