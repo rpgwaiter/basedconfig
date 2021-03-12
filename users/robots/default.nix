@@ -7,7 +7,7 @@
     group = "robots";
     uid = 1111;
     openssh.authorizedKeys.keyFiles = [
-      ../../secrets/ssh/robots_ed25519.pub
+      (toString ../../secrets/ssh/robots_ed25519.pub)
     ];
 
     extraGroups = [ "storage" "wheel" "docker" "networkmanager" "plugdev" "adbusers" ];
