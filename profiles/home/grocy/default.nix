@@ -11,4 +11,6 @@
     sslCertificate = "/var/server.crt";
     sslCertificateKey = "/var/server.key";
   };
+
+  users.groups.nginx = { };
 }
