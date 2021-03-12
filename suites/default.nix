@@ -35,6 +35,7 @@ let
       dev
       email.client
       backups.syncthing
+      cicd.distributed-builds
     ];
 
     mailStack = [
