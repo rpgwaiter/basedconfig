@@ -40,6 +40,7 @@ let
       email.client
       backups.syncthing
       cicd.distributed-builds
+      social
     ];
 
     mailStack = [
