@@ -10,6 +10,12 @@
         identitiesOnly = true;
         extraOptions = { AddKeysToAgent = "yes"; };
       };
+      "github.com" = {
+        host = "github.com";
+        identityFile = toString ../secrets/ssh/robots_ed25519;
+        identitiesOnly = true;
+        extraOptions = { AddKeysToAgent = "yes"; };
+      };
     };
   };
 }
