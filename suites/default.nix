@@ -70,6 +70,7 @@ let
       webserver.php
       docker.trilium
       home.grocy
+      sites.basedRadio.mpd
       # home.assistant
       # home.organizr
       # home.searx
