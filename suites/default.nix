@@ -37,6 +37,7 @@ let
     desktopStack = basegui ++ baseClient ++ [
       desktop
       dev
+      dev.rust
       email.client
       backups.syncthing
       cicd.distributed-builds
