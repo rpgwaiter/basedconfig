@@ -59,7 +59,7 @@ let
     ];
 
     pipeline = [
-      # cicd.jenkins ## dead meme for now
+      cicd.jenkins ## dead meme for now
       cicd.gitea
     ];
 
